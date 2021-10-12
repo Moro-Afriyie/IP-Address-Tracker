@@ -1,0 +1,6 @@
+{
+    "endOfline": "lf",
+    "printWidth":80,
+    "tabWidth":2,
+    "trialingComma" : "es5"
+}
