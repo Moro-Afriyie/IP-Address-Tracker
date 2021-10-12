@@ -1,12 +1,8 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 
 function App() {
-  return (
-    <main className="App">
-      <div>ony3</div>
-    </main>
-  );
+  return <main className="App"></main>;
 }
 
 export default App;
