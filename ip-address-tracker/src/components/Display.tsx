@@ -5,7 +5,7 @@ import "../styles/search.display.scss";
 interface IDisplayProps {}
 
 const Display: React.FunctionComponent<IDisplayProps> = (props) => {
-  return;
+  return <h1>Display</h1>;
 };
 
 export default Display;

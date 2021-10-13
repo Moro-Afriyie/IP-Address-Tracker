@@ -5,7 +5,7 @@ import "../styles/search.map.scss";
 interface IMapProps {}
 
 const Map: React.FunctionComponent<IMapProps> = (props) => {
-  return;
+  return <h1>Map</h1>;
 };
 
 export default Map;
