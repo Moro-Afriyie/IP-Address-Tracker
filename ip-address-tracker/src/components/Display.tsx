@@ -16,8 +16,7 @@ const Display: React.FunctionComponent<IDisplayProps> = (props) => {
       <div className="display__section">
         <h6 className="title">location</h6>
         <div className="info">
-          <h2>Booklyn, NY</h2>
-          <h2>10001</h2>
+          <h2>Booklyn, NY 10001</h2>
         </div>
       </div>
       <div className="display__section">
@@ -29,8 +28,7 @@ const Display: React.FunctionComponent<IDisplayProps> = (props) => {
       <div className="display__section">
         <h6 className="title">isp</h6>
         <div className="info">
-          <h2>SpaceX</h2>
-          <h2>Starlink</h2>
+          <h2>SpaceX Starlink</h2>
         </div>
       </div>
     </div>
