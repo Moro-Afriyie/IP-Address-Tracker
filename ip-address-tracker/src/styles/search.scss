@@ -25,6 +25,10 @@
       border-top-left-radius: 0.69rem;
       border-bottom-left-radius: 0.69rem;
       border: none;
+      &:focus {
+        border: none;
+        outline: none;
+      }
     }
     button {
       width: 3.2rem;
@@ -33,6 +37,7 @@
       background-color: $VeryDarkGray;
       border-top-right-radius: 0.69rem;
       border-bottom-right-radius: 0.69rem;
+      cursor: pointer;
     }
   }
 }
