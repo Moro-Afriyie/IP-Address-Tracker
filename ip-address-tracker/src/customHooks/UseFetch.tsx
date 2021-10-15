@@ -1,7 +1,16 @@
 import { useEffect, useState } from "react";
 
-export const useFetch = (url: string): string[] | null => {
-  const [response, setResponse] = useState<string[] | null>(null);
+interface IPResponse {
+  location: {
+    country: string;
+    region: string;
+    timezone: string;
+  };
+  ip: string;
+  isp: string;
+}
+export const useFetch = (url: string): IPResponse | null => {
+  const [response, setResponse] = useState<IPResponse | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
