@@ -9,6 +9,7 @@ interface ISearchProps {}
 const Search: React.FunctionComponent<ISearchProps> = (props) => {
   return (
     <div className="search" style={{ backgroundImage: `url(${pattern})` }}>
+      <h1>IP Address Tracker</h1>
       <div className="search__input">
         <input
           type="text"
