@@ -1,5 +1,30 @@
 @import "variables.scss";
 .search {
-  border: 1px solid blue;
   flex: 0.37;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  .search__input {
+    display: flex;
+    max-width: 32rem;
+    width: 100%;
+
+    #ipAddress {
+      padding: 0.8rem 1rem;
+      max-width: 27rem;
+      width: 100%;
+      font-size: $textInput;
+      border-top-left-radius: 0.69rem;
+      border-bottom-left-radius: 0.69rem;
+      border: none;
+    }
+    button {
+      width: 3.2rem;
+      border: none;
+      outline: none;
+      background-color: $VeryDarkGray;
+      border-top-right-radius: 0.69rem;
+      border-bottom-right-radius: 0.69rem;
+    }
+  }
 }
