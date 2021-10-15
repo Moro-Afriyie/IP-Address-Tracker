@@ -5,7 +5,11 @@ import "../styles/display.scss";
 interface IDisplayProps {}
 
 const Display: React.FunctionComponent<IDisplayProps> = (props) => {
-  return <h1>Display</h1>;
+  return (
+    <div className="display">
+      <h1>Display</h1>
+    </div>
+  );
 };
 
 export default Display;
