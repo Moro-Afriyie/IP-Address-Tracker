@@ -1,7 +1,6 @@
 @import "variables.scss";
 .display {
   position: absolute;
-  border: 1px solid yellow;
   left: 0;
   right: 0;
   top: 29%;
@@ -12,4 +11,5 @@
   padding: 2rem 1.3rem;
   border-radius: 15px;
   z-index: 2;
+  background-color: #ffffff;
 }
