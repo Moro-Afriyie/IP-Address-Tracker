@@ -9,7 +9,7 @@ import { useFetch } from "./customHooks/UseFetch";
 function App() {
   // const response: string[] | null = useFetch(url);
   return (
-    <main className="App">
+    <main className="container">
       <Search />
       <Display />
       <Map />
