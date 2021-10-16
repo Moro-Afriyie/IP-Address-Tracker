@@ -1422,10 +1422,10 @@
     "schema-utils" "^2.6.5"
     "source-map" "^0.7.3"
 
-"@react-leaflet/core@^1.0.2":
-  "integrity" "sha512-QbleYZTMcgujAEyWGki8Lx6cXQqWkNtQlqf5c7NImlIp8bKW66bFpez/6EVatW7+p9WKBOEOVci/9W7WW70EZg=="
-  "resolved" "https://registry.npmjs.org/@react-leaflet/core/-/core-1.0.2.tgz"
-  "version" "1.0.2"
+"@react-leaflet/core@^1.0.2", "@react-leaflet/core@^1.1.1":
+  "integrity" "sha512-7PGLWa9MZ5x/cWy8EH2VzI4T8q5WpuHbixzCDXqixP/WyqwIrg5NDUPgYuFnB4IEIZF+6nA265mYzswFo/h1Pw=="
+  "resolved" "https://registry.npmjs.org/@react-leaflet/core/-/core-1.1.1.tgz"
+  "version" "1.1.1"
 
 "@rollup/plugin-node-resolve@^7.1.1":
   "integrity" "sha512-RxtSL3XmdTAE2byxekYLnx+98kEUOrPHF/KRVjLH+DEIHy6kjIw7YINQzn+NXiH/NTrQLAwYs0GWB+csWygA9Q=="
@@ -9114,12 +9114,12 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.1.tgz"
   "version" "17.0.1"
 
-"react-leaflet@^3.1.0":
-  "integrity" "sha512-kdZS8NYbYFPmkQr7zSDR2gkKGFeWvkxqoqcmZEckzHL4d5c85dJ2gbbqhaPDpmWWgaRw9O29uA/77qpKmK4mTQ=="
-  "resolved" "https://registry.npmjs.org/react-leaflet/-/react-leaflet-3.1.0.tgz"
-  "version" "3.1.0"
+"react-leaflet@^3.2.2":
+  "integrity" "sha512-5W7iWjI9+CdTGVAICe8RUyK0n+uLshr+eLQa8eBCbmstPNpCHZJTUSbju4Ws5dkS/PUCr9t5VmoIE9CXuSBEhw=="
+  "resolved" "https://registry.npmjs.org/react-leaflet/-/react-leaflet-3.2.2.tgz"
+  "version" "3.2.2"
   dependencies:
-    "@react-leaflet/core" "^1.0.2"
+    "@react-leaflet/core" "^1.1.1"
 
 "react-refresh@^0.8.3", "react-refresh@>=0.8.3 <0.10.0":
   "integrity" "sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg=="
