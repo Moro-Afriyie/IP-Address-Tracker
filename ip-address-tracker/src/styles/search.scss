@@ -53,6 +53,9 @@
       border-top-right-radius: 0.69rem;
       border-bottom-right-radius: 0.69rem;
       cursor: pointer;
+      img {
+        height: 1rem;
+      }
       @media screen and (max-width: $mobile) {
         width: 4.3rem;
       }
