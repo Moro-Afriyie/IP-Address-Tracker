@@ -9,17 +9,19 @@ interface IMapProps {}
 
 const Map: React.FunctionComponent<IMapProps> = (props) => {
   // const position:number[] = [51.505, -0.09];
+  const lat = 51.505;
+  const long = -0.09;
 
   return (
     <div className="map">
-      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+      <MapContainer center={[lat, long]} zoom={13} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker
           // icon={<img src={marker} style={{ width: "100" }} />}
-          position={[51.505, -0.09]}
+          position={[lat, long]}
         ></Marker>
       </MapContainer>
     </div>

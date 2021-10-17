@@ -5,6 +5,7 @@ import Search from "./components/Search";
 import Map from "./components/Map";
 import { useFetch } from "./customHooks/UseFetch";
 import { API_KEY } from "./customHooks/apiKey";
+import { IpAddressContext } from "./contexts/IpAddressContext";
 
 // interface IPResponse {
 //   location: {
@@ -16,6 +17,8 @@ import { API_KEY } from "./customHooks/apiKey";
 //   isp: string;
 // }
 // const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`;
+// with ip address
+// `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=8.8.8.8`;
 function App() {
   // const response: IPResponse | null = useFetch(url);
   // const location = response?.location;
@@ -27,9 +30,11 @@ function App() {
   // console.log(response);
   return (
     <main className="container">
-      <Search />
-      <Display />
-      <Map />
+      <IpAddressContext.Provider value="">
+        <Search />
+        <Display />
+        <Map />
+      </IpAddressContext.Provider>
     </main>
   );
 }
