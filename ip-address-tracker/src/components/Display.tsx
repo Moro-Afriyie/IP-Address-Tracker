@@ -1,10 +1,21 @@
 import * as React from "react";
+import { IpAddressContext } from "../contexts/IpAddressContext";
 import "../styles/display.scss";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IDisplayProps {}
-
+interface IPResponse {
+  location: {
+    country: string;
+    region: string;
+    timezone: string;
+  };
+  ip: string;
+  isp: string;
+}
 const Display: React.FunctionComponent<IDisplayProps> = (props) => {
+  // const response = React.useContext<IPResponse | null>(IpAddressContext);
+  // console.log("context response: ", response);
   return (
     <div className="display">
       <div className="display__section">

@@ -7,16 +7,16 @@ import { useFetch } from "./customHooks/UseFetch";
 import { API_KEY } from "./customHooks/apiKey";
 import { IpAddressContext } from "./contexts/IpAddressContext";
 
-// interface IPResponse {
-//   location: {
-//     country: string;
-//     region: string;
-//     timezone: string;
-//   };
-//   ip: string;
-//   isp: string;
-// }
-// const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`;
+interface IPResponse {
+  location: {
+    country: string;
+    region: string;
+    timezone: string;
+  };
+  ip: string;
+  isp: string;
+}
+const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`;
 // with ip address
 // `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=8.8.8.8`;
 function App() {
