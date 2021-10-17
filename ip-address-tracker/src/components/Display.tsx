@@ -17,7 +17,7 @@ interface IPResponse {
 const Display: React.FunctionComponent<IDisplayProps> = (props) => {
   const result = React.useContext(IpAddressContext);
   const ip = result?.response?.ip;
-  const city = result?.response?.location.region;
+  const city = result?.response?.location.city;
   const timezone = result?.response?.location.timezone;
   const isp = result?.response?.isp;
   return (

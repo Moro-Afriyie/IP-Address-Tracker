@@ -10,7 +10,7 @@ import { IpAddressContext } from "./contexts/IpAddressContext";
 interface IPResponse {
   location: {
     country: string;
-    region: string;
+    city: string;
     timezone: string;
     lat: number;
     lng: number;
@@ -22,7 +22,17 @@ function App() {
   const [url, setUrl] = useState<string>(
     `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`
   );
-  const [response, setResponse] = useState<IPResponse | null>(null);
+  const [response, setResponse] = useState<IPResponse>({
+    location: {
+      country: "",
+      city: "",
+      timezone: "",
+      lat: 0,
+      lng: 0,
+    },
+    ip: "",
+    isp: "",
+  });
 
   useEffect(() => {
     const fetchData = async () => {
