@@ -7,6 +7,9 @@
   gap: 2rem;
   align-items: center;
   height: 16rem;
+  @media screen and (max-width: 650px) {
+    height: 24rem;
+  }
   @media screen and (max-width: $mobile) {
     height: 22rem;
   }
@@ -28,9 +31,12 @@
       border-top-left-radius: 0.69rem;
       border-bottom-left-radius: 0.69rem;
       border: none;
+      @media screen and (max-width: 650px) {
+        max-width: 21rem;
+      }
       @media screen and (max-width: $mobile) {
         padding: 1.3rem 1rem;
-        max-width: 18rem;
+        max-width: 17rem;
         width: 100%;
         font-size: 14px;
       }
@@ -47,6 +53,9 @@
       border-top-right-radius: 0.69rem;
       border-bottom-right-radius: 0.69rem;
       cursor: pointer;
+      @media screen and (max-width: $mobile) {
+        width: 4.3rem;
+      }
     }
   }
 }
