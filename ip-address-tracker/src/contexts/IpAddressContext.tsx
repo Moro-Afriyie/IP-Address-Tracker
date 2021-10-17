@@ -5,6 +5,8 @@ interface IPResponse {
     country: string;
     region: string;
     timezone: string;
+    lat?: number;
+    lng?: number;
   };
   ip: string;
   isp: string;
@@ -15,4 +17,3 @@ interface context {
   handleIPAddress: (ip: string) => void;
 }
 export const IpAddressContext = createContext<context | null>(null);
-// export const IpAddressContext = createContext({});
