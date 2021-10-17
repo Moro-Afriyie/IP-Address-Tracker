@@ -1,6 +1,6 @@
 import * as React from "react";
 import "../styles/map.scss";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import marker from "../images/icon-location.svg";
 // import Marker from "react-leaflet-enhanced-marker";
 

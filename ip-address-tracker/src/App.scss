@@ -19,3 +19,9 @@ body {
     font-size: 20px;
   }
 }
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 11px;
+  }
+}

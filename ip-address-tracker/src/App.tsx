@@ -15,7 +15,7 @@ import { API_KEY } from "./customHooks/apiKey";
 //   ip: string;
 //   isp: string;
 // }
-// const url = `https://geo.ipify.org/api/v2/country?apiKey=${API_KEY}`;
+// const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`;
 function App() {
   // const response: IPResponse | null = useFetch(url);
   // const location = response?.location;
