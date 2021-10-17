@@ -9,5 +9,10 @@ interface IPResponse {
   ip: string;
   isp: string;
 }
-// export const IpAddressContext = createContext<IPResponse | null>(null);
-export const IpAddressContext = createContext({});
+
+interface context {
+  response: IPResponse | null;
+  handleIPAddress: (ip: string) => void;
+}
+export const IpAddressContext = createContext<context | null>(null);
+// export const IpAddressContext = createContext({});
