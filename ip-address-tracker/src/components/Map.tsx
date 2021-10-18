@@ -24,8 +24,8 @@ interface IPResponse {
 
 const Map: React.FunctionComponent = () => {
   const result = React.useContext(IpAddressContext);
-  const lat = result.response?.location.lat || 0;
-  const lng = result.response?.location.lng || 0;
+  const lat = result?.response?.location.lat || 0;
+  const lng = result?.response?.location.lng || 0;
 
   console.log(lat, lng);
   return (

@@ -15,8 +15,6 @@ interface IPResponse {
 interface context {
   response: IPResponse | null;
   handleIPAddress: (ip: string) => void;
-  lat: number;
-  lng: number;
 }
 export const IpAddressContext = createContext<context>({
   response: {
@@ -33,7 +31,5 @@ export const IpAddressContext = createContext<context>({
   handleIPAddress: (ip) => {
     ip;
   },
-  lat: 0,
-  lng: 0,
 });
 // export const IpAddressContext = createContext<context | null>(null);

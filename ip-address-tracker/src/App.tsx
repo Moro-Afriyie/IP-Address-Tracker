@@ -58,9 +58,7 @@ function App() {
   };
   return (
     <main className="container">
-      <IpAddressContext.Provider
-        value={{ response, handleIPAddress, lat, lng }}
-      >
+      <IpAddressContext.Provider value={{ response, handleIPAddress }}>
         <Search />
         <Display />
         <Map />
