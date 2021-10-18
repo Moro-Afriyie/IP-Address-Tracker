@@ -18,6 +18,7 @@ interface IPResponse {
   ip: string;
   isp: string;
 }
+
 function App() {
   const [url, setUrl] = useState<string>(
     `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`
@@ -30,8 +31,13 @@ function App() {
     const fetchData = async () => {
       const res = await fetch(url);
       const data = await res.json();
-      setResponse(data);
-      setLoading(false);
+      if (data.ip) {
+        setResponse(data);
+        setLoading(false);
+      } else {
+        setLoading(false);
+        alert("IP not found. using default ip");
+      }
     };
 
     fetchData();

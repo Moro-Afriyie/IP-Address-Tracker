@@ -8,15 +8,17 @@
   align-items: center;
   height: 16rem;
   @media screen and (max-width: 650px) {
-    height: 24rem;
+    height: 30rem;
   }
   @media screen and (max-width: $mobile) {
-    height: 22rem;
+    height: 21rem;
+    gap: 1rem;
   }
   h1 {
     margin-top: 1.7rem;
     color: #ffffff;
   }
+
   .search__input {
     display: flex;
     width: 100%;
