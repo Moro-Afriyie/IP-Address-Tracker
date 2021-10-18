@@ -5,19 +5,7 @@ import Search from "./components/Search";
 import Map from "./components/Map";
 import { API_KEY } from "./customHooks/apiKey";
 import { IpAddressContext } from "./contexts/IpAddressContext";
-
-interface IPResponse {
-  location: {
-    region: string;
-    city: string;
-    timezone: string;
-    lat: number;
-    lng: number;
-    geonameId: number;
-  };
-  ip: string;
-  isp: string;
-}
+import { IPResponse } from "./models/interfaces";
 
 function App() {
   const [url, setUrl] = useState<string>(

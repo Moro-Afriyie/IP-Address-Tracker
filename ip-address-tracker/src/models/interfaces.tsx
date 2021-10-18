@@ -5,12 +5,8 @@ export interface IPResponse {
     timezone: string;
     lat: number;
     lng: number;
+    geonameId: number;
   };
   ip: string;
   isp: string;
 }
-
-// export interface ContextInterface extends IPResponse {
-//   response: IPResponse | null;
-//   handleIPAddress: (ip: string) => void;
-// }

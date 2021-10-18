@@ -1,17 +1,5 @@
-import React, { createContext } from "react";
-
-interface IPResponse {
-  location: {
-    region: string;
-    city: string;
-    timezone: string;
-    lat: number;
-    lng: number;
-    geonameId: number;
-  };
-  ip: string;
-  isp: string;
-}
+import { createContext } from "react";
+import { IPResponse } from "../models/interfaces";
 
 interface context {
   response: IPResponse | null;
@@ -36,4 +24,3 @@ export const IpAddressContext = createContext<context>({
   },
   loading: false,
 });
-// export const IpAddressContext = createContext<context | null>(null);
