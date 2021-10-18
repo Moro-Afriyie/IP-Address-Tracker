@@ -13,6 +13,7 @@ interface IPResponse {
     timezone: string;
     lat: number;
     lng: number;
+    geonameId: number;
   };
   ip: string;
   isp: string;
@@ -22,12 +23,15 @@ function App() {
     `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`
   );
   const [response, setResponse] = useState<IPResponse | null>(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       const res = await fetch(url);
       const data = await res.json();
       setResponse(data);
+      setLoading(false);
     };
 
     fetchData();
@@ -40,7 +44,7 @@ function App() {
   };
   return (
     <main className="container">
-      <IpAddressContext.Provider value={{ response, handleIPAddress }}>
+      <IpAddressContext.Provider value={{ response, handleIPAddress, loading }}>
         <Search />
         <Display />
         <Map />

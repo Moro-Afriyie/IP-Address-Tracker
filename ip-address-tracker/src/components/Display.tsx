@@ -10,31 +10,34 @@ const Display: React.FunctionComponent = () => {
   const region = result?.response?.location.region;
   const timezone = result?.response?.location.timezone;
   const isp = result?.response?.isp;
+  const geonameId = result?.response?.location.geonameId;
+  const loading = result.loading;
+
   return (
     <div className="display">
       <div className="display__section">
         <h6 className="title">ip address</h6>
-        <div className="info">
-          <h2>{ip || <ClipLoader />}</h2>
-        </div>
+        <div className="info">{loading ? <ClipLoader /> : <h2>{ip}</h2>}</div>
       </div>
       <div className="display__section">
         <h6 className="title">location</h6>
         <div className="info">
-          <h2>{city + ", " + region || <ClipLoader />}</h2>
+          {loading ? (
+            <ClipLoader />
+          ) : (
+            <h2>{`${city}, ${region} ${geonameId}`}</h2>
+          )}
         </div>
       </div>
       <div className="display__section">
         <h6 className="title">time zone</h6>
         <div className="info">
-          <h2>{`UTC${timezone || "00:00"}`}</h2>
+          {loading ? <ClipLoader /> : <h2>{`UTC${timezone}`}</h2>}
         </div>
       </div>
       <div className="display__section">
         <h6 className="title">isp</h6>
-        <div className="info">
-          <h2>{isp || <ClipLoader />}</h2>
-        </div>
+        <div className="info">{loading ? <ClipLoader /> : <h2>{isp}</h2>}</div>
       </div>
     </div>
   );

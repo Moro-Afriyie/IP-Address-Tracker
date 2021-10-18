@@ -7,6 +7,7 @@ interface IPResponse {
     timezone: string;
     lat: number;
     lng: number;
+    geonameId: number;
   };
   ip: string;
   isp: string;
@@ -15,6 +16,7 @@ interface IPResponse {
 interface context {
   response: IPResponse | null;
   handleIPAddress: (ip: string) => void;
+  loading: boolean;
 }
 export const IpAddressContext = createContext<context>({
   response: {
@@ -24,6 +26,7 @@ export const IpAddressContext = createContext<context>({
       timezone: "--",
       lat: 0,
       lng: 0,
+      geonameId: 0,
     },
     ip: "--",
     isp: "--",
@@ -31,5 +34,6 @@ export const IpAddressContext = createContext<context>({
   handleIPAddress: (ip) => {
     ip;
   },
+  loading: false,
 });
 // export const IpAddressContext = createContext<context | null>(null);
