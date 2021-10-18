@@ -2,7 +2,7 @@ import React, { createContext } from "react";
 
 interface IPResponse {
   location: {
-    country: string;
+    region: string;
     city: string;
     timezone: string;
     lat: number;
@@ -19,7 +19,7 @@ interface context {
 export const IpAddressContext = createContext<context>({
   response: {
     location: {
-      country: "",
+      region: "",
       city: "",
       timezone: "",
       lat: 0,

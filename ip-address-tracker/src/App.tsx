@@ -9,7 +9,7 @@ import { IpAddressContext } from "./contexts/IpAddressContext";
 
 interface IPResponse {
   location: {
-    country: string;
+    region: string;
     city: string;
     timezone: string;
     lat: number;
@@ -24,7 +24,7 @@ function App() {
   );
   const [response, setResponse] = useState<IPResponse>({
     location: {
-      country: "",
+      region: "",
       city: "",
       timezone: "",
       lat: 0,

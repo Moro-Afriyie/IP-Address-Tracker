@@ -18,6 +18,7 @@ const Display: React.FunctionComponent<IDisplayProps> = (props) => {
   const result = React.useContext(IpAddressContext);
   const ip = result?.response?.ip;
   const city = result?.response?.location.city;
+  const region = result?.response?.location.region;
   const timezone = result?.response?.location.timezone;
   const isp = result?.response?.isp;
   return (
@@ -31,7 +32,7 @@ const Display: React.FunctionComponent<IDisplayProps> = (props) => {
       <div className="display__section">
         <h6 className="title">location</h6>
         <div className="info">
-          <h2>{city || <ClipLoader />}</h2>
+          <h2>{city + ", " + region || <ClipLoader />}</h2>
         </div>
       </div>
       <div className="display__section">
