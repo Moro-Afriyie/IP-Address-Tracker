@@ -20,6 +20,9 @@
   & > * {
     flex-basis: 100%;
   }
+  @media screen and (max-width: 1150px) {
+    max-width: 60rem;
+  }
   @media screen and (max-width: 900px) {
     max-width: 39rem;
     width: 100%;
