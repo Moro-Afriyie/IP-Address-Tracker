@@ -22,24 +22,28 @@ function App() {
   const [url, setUrl] = useState<string>(
     `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`
   );
-  const [response, setResponse] = useState<IPResponse>({
-    location: {
-      region: "",
-      city: "",
-      timezone: "",
-      lat: 0,
-      lng: 0,
-    },
-    ip: "",
-    isp: "",
-  });
+  const [lat, setLat] = useState(51.505);
+  const [lng, setlng] = useState(-0.09);
+  // const [response, setResponse] = useState<IPResponse>({
+  //   location: {
+  //     region: "--",
+  //     city: "--",
+  //     timezone: "--",
+  //     lat: 4.86992,
+  //     lng: -2.58404,
+  //   },
+  //   ip: "--",
+  //   isp: "--",
+  // });
+  const [response, setResponse] = useState<IPResponse | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(url);
       const data = await res.json();
       setResponse(data);
-      console.log(response);
+      setLat(data.location.lat);
+      setlng(data.location.lng);
     };
 
     fetchData();
@@ -54,7 +58,9 @@ function App() {
   };
   return (
     <main className="container">
-      <IpAddressContext.Provider value={{ response, handleIPAddress }}>
+      <IpAddressContext.Provider
+        value={{ response, handleIPAddress, lat, lng }}
+      >
         <Search />
         <Display />
         <Map />

@@ -1,37 +1,36 @@
 import * as React from "react";
 import "../styles/map.scss";
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
-import { Icon } from "leaflet";
+import { MapContainer, Marker, TileLayer, useMap } from "react-leaflet";
+import L, { Icon, LatLngExpression } from "leaflet";
 import marker from "../images/icon-location.svg";
 import { IpAddressContext } from "../contexts/IpAddressContext";
 import { useState, useEffect } from "react";
 import { API_KEY } from "../customHooks/apiKey";
+/// <reference path="./node_modules/@types/leaflet/index.d.ts" />
 // import Marker from "react-leaflet-enhanced-marker";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IMapProps {}
+interface IPResponse {
+  location: {
+    region: string;
+    city: string;
+    timezone: string;
+    lat: number;
+    lng: number;
+  };
+  ip: string;
+  isp: string;
+}
 
-const Map: React.FunctionComponent<IMapProps> = (props) => {
+const Map: React.FunctionComponent = () => {
   const result = React.useContext(IpAddressContext);
-  const [lat, setLat] = useState(51.505);
-  const [lng, setLng] = useState(-0.09);
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch(
-        `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${result?.response?.ip}`
-      );
-      const data = await res.json();
-      setLat(data.location.lat);
-      setLng(data.location.lng);
-      console.log({ lat, lng });
-    };
+  const lat = result.response?.location.lat || 0;
+  const lng = result.response?.location.lng || 0;
 
-    fetchData();
-  }, [result?.response?.ip]);
-  // [51.505, -0.09];
+  console.log(lat, lng);
   return (
     <div className="map">
-      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+      <MapContainer center={[lat, lng]} zoom={13} scrollWheelZoom={true}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -41,14 +40,24 @@ const Map: React.FunctionComponent<IMapProps> = (props) => {
             new Icon({
               iconUrl: marker,
               iconSize: [40, 50],
-              iconAnchor: [12, 41],
             })
           }
-          position={[51.505, -0.09]}
+          position={[lat, lng]}
         ></Marker>
+        <ChangeMapView lat={lat} lng={lng} />
       </MapContainer>
     </div>
   );
 };
 
+interface mapview {
+  lat: number;
+  lng: number;
+}
+function ChangeMapView<mapView>(props: mapview) {
+  const map = useMap();
+  map.setView(new L.LatLng(props.lat, props.lng), map.getZoom());
+
+  return null;
+}
 export default Map;
