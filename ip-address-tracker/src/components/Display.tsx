@@ -3,18 +3,7 @@ import { IpAddressContext } from "../contexts/IpAddressContext";
 import "../styles/display.scss";
 import ClipLoader from "react-spinners/ClipLoader";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IDisplayProps {}
-interface IPResponse {
-  location: {
-    country: string;
-    region: string;
-    timezone: string;
-  };
-  ip: string;
-  isp: string;
-}
-const Display: React.FunctionComponent<IDisplayProps> = (props) => {
+const Display: React.FunctionComponent = () => {
   const result = React.useContext(IpAddressContext);
   const ip = result?.response?.ip;
   const city = result?.response?.location.city;

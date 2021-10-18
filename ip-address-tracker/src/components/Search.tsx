@@ -3,12 +3,8 @@ import "../styles/search.scss";
 import arrow from "../images/icon-arrow.svg";
 import pattern from "../images/pattern-bg.png";
 import { IpAddressContext } from "../contexts/IpAddressContext";
-import { API_KEY } from "../customHooks/apiKey";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface ISearchProps {}
-
-const Search: React.FunctionComponent<ISearchProps> = (props) => {
+const Search: React.FunctionComponent = () => {
   const [ip, setIp] = React.useState("");
   const res = React.useContext(IpAddressContext);
 
