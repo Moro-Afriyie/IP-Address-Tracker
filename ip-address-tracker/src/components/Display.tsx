@@ -2,6 +2,7 @@ import * as React from "react";
 import { IpAddressContext } from "../contexts/IpAddressContext";
 import "../styles/display.scss";
 import ClipLoader from "react-spinners/ClipLoader";
+import { isJSDocParameterTag } from "typescript";
 
 const Display: React.FunctionComponent = () => {
   const result = React.useContext(IpAddressContext);
@@ -13,11 +14,27 @@ const Display: React.FunctionComponent = () => {
   const geonameId = result?.response?.location.geonameId;
   const loading = result.loading;
 
+  const hanldeIPV6 = (ip: string) => {
+    if (ip.indexOf(":") > 0 && ip.split(":").length === 8) {
+      return (
+        ip.split(":").slice(0, 3).join(":") +
+        ": " +
+        ip.split(":").slice(3, 6).join(":") +
+        ": " +
+        ip.split(":").slice(6, 8).join(":")
+      );
+    } else {
+      return ip;
+    }
+  };
+
   return (
     <div className="display">
       <div className="display__section">
         <h6 className="title">ip address</h6>
-        <div className="info">{loading ? <ClipLoader /> : <h2>{ip}</h2>}</div>
+        <div className="info">
+          {loading ? <ClipLoader /> : <h2>{hanldeIPV6(ip ? ip : "")}</h2>}
+        </div>
       </div>
       <div className="display__section">
         <h6 className="title">location</h6>
