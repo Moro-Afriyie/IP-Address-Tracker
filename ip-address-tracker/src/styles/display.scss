@@ -75,10 +75,10 @@
       color: $VeryDarkGray;
     }
     .ip {
-      width: 11rem;
+      width: 16vw;
       word-wrap: break-word;
-      @media screen and (max-width: 950px) {
-        width: 8rem;
+      @media screen and (max-width: 710px) {
+        width: 15vw;
       }
       @media screen and (max-width: 650px) {
         width: 18rem;
