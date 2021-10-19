@@ -24,10 +24,15 @@
     max-width: 55rem;
   }
   @media screen and (max-width: 930px) {
-    max-width: 49rem;
+    // max-width: 49rem;
   }
   @media screen and (max-width: 900px) {
-    max-width: 41rem;
+    max-width: 43rem;
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+  @media screen and (max-width: 800px) {
+    max-width: 41.5rem;
     width: 100%;
     padding: 1rem 1rem;
   }
@@ -72,6 +77,19 @@
     }
     .info {
       color: $VeryDarkGray;
+    }
+    .ip {
+      width: 18rem;
+      word-wrap: break-word;
+      @media screen and (max-width: 1330px) {
+        width: 11rem;
+      }
+      @media screen and (max-width: 950px) {
+        width: 8rem;
+      }
+      @media screen and (max-width: 650px) {
+        width: 100%;
+      }
     }
     @media screen and (max-width: 650px) {
       border-right: none;

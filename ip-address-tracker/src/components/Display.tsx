@@ -32,8 +32,8 @@ const Display: React.FunctionComponent = () => {
     <div className="display">
       <div className="display__section">
         <h6 className="title">ip address</h6>
-        <div className="info">
-          {loading ? <ClipLoader /> : <h2>{hanldeIPV6(ip ? ip : "")}</h2>}
+        <div className="info ip">
+          {loading ? <ClipLoader /> : <h2>{ip}</h2>}
         </div>
       </div>
       <div className="display__section">
