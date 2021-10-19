@@ -2,7 +2,6 @@ import * as React from "react";
 import { IpAddressContext } from "../contexts/IpAddressContext";
 import "../styles/display.scss";
 import ClipLoader from "react-spinners/ClipLoader";
-import { isJSDocParameterTag } from "typescript";
 
 const Display: React.FunctionComponent = () => {
   const result = React.useContext(IpAddressContext);
