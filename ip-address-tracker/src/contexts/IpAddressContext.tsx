@@ -1,12 +1,7 @@
 import { createContext } from "react";
-import { IPResponse } from "../models/interfaces";
+import { IContext } from "../models/interfaces";
 
-interface context {
-  response: IPResponse | null;
-  handleIPAddress: (ip: string) => void;
-  loading: boolean;
-}
-export const IpAddressContext = createContext<context>({
+export const IpAddressContext = createContext<IContext>({
   response: {
     location: {
       region: "--",

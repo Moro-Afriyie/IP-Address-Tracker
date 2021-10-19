@@ -10,3 +10,9 @@ export interface IPResponse {
   ip: string;
   isp: string;
 }
+
+export interface IContext {
+  response: IPResponse | null;
+  handleIPAddress: (ip: string) => void;
+  loading: boolean;
+}
