@@ -21,7 +21,7 @@
     flex-basis: 100%;
   }
   @media screen and (max-width: 1150px) {
-    max-width: 55rem;
+    max-width: 50rem;
   }
 
   @media screen and (max-width: 900px) {
@@ -75,16 +75,13 @@
       color: $VeryDarkGray;
     }
     .ip {
-      width: 18rem;
+      width: 11rem;
       word-wrap: break-word;
-      @media screen and (max-width: 1330px) {
-        width: 11rem;
-      }
       @media screen and (max-width: 950px) {
         width: 8rem;
       }
       @media screen and (max-width: 650px) {
-        width: 100%;
+        width: 18rem;
       }
     }
     @media screen and (max-width: 650px) {
