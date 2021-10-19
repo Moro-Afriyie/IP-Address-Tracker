@@ -10,7 +10,6 @@ const Map: React.FunctionComponent = () => {
   const lat = result?.response?.location.lat || 0;
   const lng = result?.response?.location.lng || 0;
 
-  console.log(lat, lng);
   return (
     <div className="map">
       <MapContainer center={[lat, lng]} zoom={13} scrollWheelZoom={true}>

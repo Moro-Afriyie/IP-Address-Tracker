@@ -17,7 +17,6 @@ export const useFetch = (url: string): IPResponse | null => {
       const res = await fetch(url);
       const data = await res.json();
       setResponse(data);
-      console.log(response);
     };
 
     fetchData();

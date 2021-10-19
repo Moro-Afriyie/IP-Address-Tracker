@@ -23,9 +23,7 @@
   @media screen and (max-width: 1150px) {
     max-width: 55rem;
   }
-  @media screen and (max-width: 930px) {
-    // max-width: 49rem;
-  }
+
   @media screen and (max-width: 900px) {
     max-width: 43rem;
     width: 100%;
@@ -51,8 +49,6 @@
   @media screen and (max-width: $mobile) {
     max-width: 23rem;
     padding: 1rem 1rem;
-
-    // top: 24%;
   }
   .display__section {
     display: flex;

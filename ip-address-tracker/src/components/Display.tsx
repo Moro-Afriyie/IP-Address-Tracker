@@ -14,20 +14,6 @@ const Display: React.FunctionComponent = () => {
   const geonameId = result?.response?.location.geonameId;
   const loading = result.loading;
 
-  const hanldeIPV6 = (ip: string) => {
-    if (ip.indexOf(":") > 0 && ip.split(":").length === 8) {
-      return (
-        ip.split(":").slice(0, 3).join(":") +
-        ": " +
-        ip.split(":").slice(3, 6).join(":") +
-        ": " +
-        ip.split(":").slice(6, 8).join(":")
-      );
-    } else {
-      return ip;
-    }
-  };
-
   return (
     <div className="display">
       <div className="display__section">
