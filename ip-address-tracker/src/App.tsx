@@ -32,9 +32,18 @@ function App() {
   }, [url]);
 
   const handleIPAddress = (ip: string) => {
-    setUrl(
+    const regex = /^[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+$/gm;
+    if(regex.test(ip)){
+      setUrl(
+      `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&domain=${ip}`
+    );
+    }
+    else{
+      setUrl(
       `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ip}`
     );
+    }
+    
   };
   return (
     <main className="container">
