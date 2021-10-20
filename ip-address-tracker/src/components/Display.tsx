@@ -27,7 +27,7 @@ const Display: React.FunctionComponent = () => {
           {loading ? (
             <ClipLoader />
           ) : (
-            <h2>{`${city}, ${region} ${geonameId}`}</h2>
+            <h2>{`${city}, ${region} ${geonameId || ""}`}</h2>
           )}
         </div>
       </div>
