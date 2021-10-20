@@ -25,7 +25,7 @@ function App() {
       } else {
         setLoading(false);
         setUrl(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`);
-        alert("IP not found. using user own ip address");
+        alert("Bad request. using user own ip address");
       }
     };
 
